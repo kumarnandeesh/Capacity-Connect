@@ -1,0 +1,4 @@
+This folder stores files uploaded by trainers to their course library
+(recorded lectures, presentations, study material). It's created
+automatically at runtime — this file just keeps the empty folder
+around when the project is zipped or committed.
