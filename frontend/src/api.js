@@ -1,4 +1,7 @@
-const BASE_URL = "http://localhost:5000/api";
+const RAW_URL = import.meta.env.VITE_API_URL || "https://capacity-connect-8nlc.onrender.com";
+const BASE_URL = RAW_URL.endsWith("/api")
+  ? RAW_URL.replace(/\/$/, "")
+  : `${RAW_URL.replace(/\/$/, "")}/api`;
 
 async function request(path, { method = "GET", body, token, isForm = false } = {}) {
   const headers = {};
